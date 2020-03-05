@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y apache2 \
     && a2enmod proxy_fcgi
     
 COPY 000-default.conf /etc/apache2/sites-available
-COPY index.php dwes.css /var/www/html/
+COPY index.php dwes.css /var/www/html
 
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
